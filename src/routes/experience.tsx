@@ -27,7 +27,7 @@ export const Route = createFileRoute("/experience")({
 
 function ExperiencePage() {
   return (
-    <div className="page-aura min-h-svh pb-28 pt-8 md:pb-16 md:pt-24">
+    <div className="page-aura min-h-svh pb-32 pt-8 md:pb-16 md:pt-24">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <p className="label-xs text-teal-deep">Experiences</p>
         <h1 className="mt-2 text-3xl font-extrabold md:text-5xl">
