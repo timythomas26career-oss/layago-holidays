@@ -1,0 +1,1330 @@
+<!doctype html>
+<html lang="en" data-tsd-source="/src/routes/__root.tsx:109:5">
+  <head data-tsd-source="/src/routes/__root.tsx:110:7">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" as="image" href="/src/assets/hero-krabi.jpg" />
+    <link rel="stylesheet" href="/src/styles.css" data-precedence="default" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+      data-precedence="default"
+    />
+    <link
+      rel="stylesheet"
+      href="/@tanstack-start/styles.css?routes=__root__%2C%2F"
+      data-tanstack-router-dev-styles="true"
+      data-precedence="default"
+    />
+    <title>Azure â€” Luxury Travel Discovery &amp; Booking</title>
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="description"
+      content="Discover and book premium island escapes, alpine lakes and luxury resorts with Azure, a curated travel discovery platform."
+    />
+    <meta
+      property="og:title"
+      content="Azure â€” Luxury Travel Discovery &amp; Booking"
+    />
+    <meta
+      property="og:description"
+      content="Curated tropical islands, alpine retreats and luxury stays, ready to book."
+    />
+    <link
+      rel="modulepreload"
+      href="/@id/virtual:tanstack-start-dev-client-entry"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body data-tsd-source="/src/routes/__root.tsx:113:7">
+    <header
+      class="pointer-events-none fixed inset-x-0 top-0 z-50 hidden justify-center px-6 pt-5 md:flex"
+      data-tsd-source="/src/components/DesktopNavigation.tsx:26:5"
+    >
+      <nav
+        aria-label="Main"
+        class="glass pointer-events-auto flex w-full max-w-6xl items-center gap-6 rounded-full px-3 py-2.5 shadow-soft"
+        data-tsd-source="/src/components/DesktopNavigation.tsx:27:7"
+      >
+        <a
+          data-tsd-source="/src/components/DesktopNavigation.tsx:31:9"
+          class="flex min-w-0 items-center gap-2 pl-3 active"
+          href="/"
+          data-status="active"
+          aria-current="page"
+          ><span
+            class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-ink text-background"
+            data-tsd-source="/src/components/DesktopNavigation.tsx:32:11"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-earth h-4 w-4"
+              aria-hidden="true"
+              data-tsd-source="/src/components/DesktopNavigation.tsx:33:13"
+            >
+              <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"></path>
+              <path
+                d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"
+              ></path>
+              <path
+                d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"
+              ></path>
+              <circle cx="12" cy="12" r="10"></circle></svg></span
+          ><span
+            class="truncate text-[15px] font-extrabold tracking-tight"
+            data-tsd-source="/src/components/DesktopNavigation.tsx:35:11"
+            >Azure</span
+          ></a
+        >
+        <ul
+          class="ml-2 hidden items-center gap-1 lg:flex"
+          data-tsd-source="/src/components/DesktopNavigation.tsx:38:9"
+        >
+          <li data-tsd-source="/src/components/DesktopNavigation.tsx:40:13">
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:41:15"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground text-foreground bg-white/80"
+              href="/"
+              data-status="active"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li data-tsd-source="/src/components/DesktopNavigation.tsx:40:13">
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:41:15"
+              href="/explore"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >Explore</a
+            >
+          </li>
+          <li data-tsd-source="/src/components/DesktopNavigation.tsx:40:13">
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:41:15"
+              href="/packages"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >Packages</a
+            >
+          </li>
+          <li data-tsd-source="/src/components/DesktopNavigation.tsx:40:13">
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:41:15"
+              href="/customize"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >Customize</a
+            >
+          </li>
+          <li data-tsd-source="/src/components/DesktopNavigation.tsx:40:13">
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:41:15"
+              href="/about"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >About</a
+            >
+          </li>
+          <li data-tsd-source="/src/components/DesktopNavigation.tsx:40:13">
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:41:15"
+              href="/contact"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >Contact</a
+            >
+          </li>
+          <li
+            class="hidden xl:block"
+            data-tsd-source="/src/components/DesktopNavigation.tsx:52:13"
+          >
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:53:15"
+              href="/gallery"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >Gallery</a
+            >
+          </li>
+          <li
+            class="hidden xl:block"
+            data-tsd-source="/src/components/DesktopNavigation.tsx:52:13"
+          >
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:53:15"
+              href="/faq"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >FAQ</a
+            >
+          </li>
+          <li
+            class="hidden xl:block"
+            data-tsd-source="/src/components/DesktopNavigation.tsx:52:13"
+          >
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:53:15"
+              href="/saved"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >Saved</a
+            >
+          </li>
+          <li
+            class="hidden xl:block"
+            data-tsd-source="/src/components/DesktopNavigation.tsx:52:13"
+          >
+            <a
+              data-tsd-source="/src/components/DesktopNavigation.tsx:53:15"
+              href="/experience"
+              class="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/70 hover:text-foreground"
+              >Experiences</a
+            >
+          </li>
+        </ul>
+        <div
+          class="ml-auto flex shrink-0 items-center gap-2"
+          data-tsd-source="/src/components/DesktopNavigation.tsx:60:9"
+        >
+          <a
+            data-tsd-source="/src/components/DesktopNavigation.tsx:61:11"
+            href="/packages"
+            class="hidden items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:flex"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-compass h-4 w-4"
+              aria-hidden="true"
+              data-tsd-source="/src/components/DesktopNavigation.tsx:65:13"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path
+                d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"
+              ></path></svg
+            >Packages</a
+          ><a
+            data-tsd-source="/src/components/DesktopNavigation.tsx:68:11"
+            href="/customize"
+            class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-background shadow-pill transition-transform hover:-translate-y-0.5"
+            >Inquiry</a
+          >
+        </div>
+      </nav>
+    </header>
+    <!--$-->
+    <div
+      class="page-aura min-h-svh pb-28 md:pb-0"
+      data-tsd-source="/src/routes/index.tsx:31:5"
+    >
+      <section
+        class="px-4 pt-4 md:px-6 md:pt-24"
+        data-tsd-source="/src/components/HeroSection.tsx:8:5"
+      >
+        <div
+          class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] shadow-float md:rounded-[2.5rem]"
+          data-tsd-source="/src/components/HeroSection.tsx:9:7"
+        >
+          <img
+            src="/src/assets/hero-krabi.jpg"
+            alt="Ao Nang, Krabi, Thailand"
+            width="1600"
+            height="1200"
+            class="h-[78svh] w-full object-cover md:h-[72vh]"
+            data-tsd-source="/src/components/HeroSection.tsx:10:9"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/10 to-black/70"
+            data-tsd-source="/src/components/HeroSection.tsx:17:9"
+          ></div>
+          <div
+            class="absolute inset-0 flex flex-col justify-between p-5 md:p-10"
+            data-tsd-source="/src/components/HeroSection.tsx:19:9"
+          >
+            <div
+              class="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4"
+              data-tsd-source="/src/components/HeroSection.tsx:20:11"
+            >
+              <div
+                class="min-w-0"
+                data-tsd-source="/src/components/HeroSection.tsx:21:13"
+              >
+                <p
+                  class="text-2xl font-extrabold text-white md:text-3xl"
+                  data-tsd-source="/src/components/HeroSection.tsx:22:15"
+                >
+                  Hi, Venusha!
+                </p>
+                <p
+                  class="text-lg font-light text-white/85 md:text-xl"
+                  data-tsd-source="/src/components/HeroSection.tsx:23:15"
+                >
+                  Explore the world
+                </p>
+              </div>
+              <a
+                data-tsd-source="/src/components/HeroSection.tsx:25:13"
+                href="/destination/ao-nang-krabi"
+                class="shrink-0 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-background shadow-pill transition-transform hover:-translate-y-0.5"
+                >Book Now</a
+              >
+            </div>
+            <div
+              class="max-w-xl"
+              data-tsd-source="/src/components/HeroSection.tsx:34:11"
+            >
+              <p
+                class="label-xs text-white/75"
+                data-tsd-source="/src/components/HeroSection.tsx:35:13"
+              >
+                Featured
+              </p>
+              <h1
+                class="mt-2 text-[2.75rem] leading-[0.95] font-extrabold text-white md:text-6xl"
+                data-tsd-source="/src/components/HeroSection.tsx:36:13"
+              >
+                Ao Nang<br
+                  data-tsd-source="/src/components/HeroSection.tsx:38:15"
+                />Krabi
+              </h1>
+              <p
+                class="mt-3 flex items-center gap-1.5 text-sm text-white/85"
+                data-tsd-source="/src/components/HeroSection.tsx:41:13"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-map-pin h-4 w-4"
+                  aria-hidden="true"
+                  data-tsd-source="/src/components/HeroSection.tsx:42:15"
+                >
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle></svg
+                >Thailand
+              </p>
+              <div
+                class="mt-6 flex flex-wrap items-center gap-4"
+                data-tsd-source="/src/components/HeroSection.tsx:46:13"
+              >
+                <a
+                  data-tsd-source="/src/components/HeroSection.tsx:47:15"
+                  href="/explore"
+                  class="group flex items-center gap-3 rounded-full bg-white py-1.5 pl-1.5 pr-6 text-sm font-semibold text-ink shadow-float"
+                  ><span
+                    class="grid h-10 w-10 place-items-center rounded-full bg-ink text-background transition-transform group-hover:translate-x-0.5"
+                    data-tsd-source="/src/components/HeroSection.tsx:51:17"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-right h-4 w-4"
+                      aria-hidden="true"
+                      data-tsd-source="/src/components/HeroSection.tsx:52:19"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path></svg></span
+                  >Explore</a
+                >
+                <div
+                  class="hidden items-center gap-2 md:flex"
+                  data-tsd-source="/src/components/HeroSection.tsx:56:15"
+                >
+                  <span
+                    class="h-2 rounded-full bg-white transition-all w-2 opacity-50"
+                    data-tsd-source="/src/components/HeroSection.tsx:58:19"
+                  ></span
+                  ><span
+                    class="h-2 rounded-full bg-white transition-all w-6"
+                    data-tsd-source="/src/components/HeroSection.tsx:58:19"
+                  ></span
+                  ><span
+                    class="h-2 rounded-full bg-white transition-all w-2 opacity-50"
+                    data-tsd-source="/src/components/HeroSection.tsx:58:19"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-6 hidden max-w-md md:block"
+              data-tsd-source="/src/components/HeroSection.tsx:67:11"
+            >
+              <div
+                class="w-full"
+                data-tsd-source="/src/components/SearchBar.tsx:13:5"
+              >
+                <p
+                  class="mb-3 text-sm font-medium text-white/85"
+                  data-tsd-source="/src/components/SearchBar.tsx:14:7"
+                >
+                  Where do you want to go?
+                </p>
+                <form
+                  role="search"
+                  class="glass flex items-center gap-3 rounded-full py-2 pl-5 pr-2 shadow-float"
+                  data-tsd-source="/src/components/SearchBar.tsx:23:7"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-search h-4.5 w-4.5 shrink-0 text-muted-foreground"
+                    aria-hidden="true"
+                    data-tsd-source="/src/components/SearchBar.tsx:28:9"
+                  >
+                    <path d="m21 21-4.34-4.34"></path>
+                    <circle cx="11" cy="11" r="8"></circle></svg
+                  ><input
+                    type="search"
+                    aria-label="Where do you want to go?"
+                    placeholder="Search all around the world"
+                    class="min-w-0 flex-1 bg-transparent py-2.5 text-sm text-foreground outline-none placeholder:text-muted-foreground"
+                    data-tsd-source="/src/components/SearchBar.tsx:29:9"
+                  /><button
+                    type="submit"
+                    aria-label="Search destinations"
+                    class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-ink text-background shadow-pill transition-transform hover:scale-105"
+                    data-tsd-source="/src/components/SearchBar.tsx:35:9"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-sliders-horizontal h-4 w-4"
+                      aria-hidden="true"
+                      data-tsd-source="/src/components/SearchBar.tsx:40:11"
+                    >
+                      <path d="M10 5H3"></path>
+                      <path d="M12 19H3"></path>
+                      <path d="M14 3v4"></path>
+                      <path d="M16 17v4"></path>
+                      <path d="M21 12h-9"></path>
+                      <path d="M21 19h-5"></path>
+                      <path d="M21 5h-7"></path>
+                      <path d="M8 10v4"></path>
+                      <path d="M8 12H3"></path>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mx-auto mt-5 max-w-6xl md:hidden"
+          data-tsd-source="/src/components/HeroSection.tsx:73:7"
+        >
+          <div
+            class="w-full"
+            data-tsd-source="/src/components/SearchBar.tsx:13:5"
+          >
+            <p
+              class="mb-3 text-sm font-medium text-muted-foreground"
+              data-tsd-source="/src/components/SearchBar.tsx:14:7"
+            >
+              Where do you want to go?
+            </p>
+            <form
+              role="search"
+              class="glass flex items-center gap-3 rounded-full py-2 pl-5 pr-2 shadow-float"
+              data-tsd-source="/src/components/SearchBar.tsx:23:7"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search h-4.5 w-4.5 shrink-0 text-muted-foreground"
+                aria-hidden="true"
+                data-tsd-source="/src/components/SearchBar.tsx:28:9"
+              >
+                <path d="m21 21-4.34-4.34"></path>
+                <circle cx="11" cy="11" r="8"></circle></svg
+              ><input
+                type="search"
+                aria-label="Where do you want to go?"
+                placeholder="Search all around the world"
+                class="min-w-0 flex-1 bg-transparent py-2.5 text-sm text-foreground outline-none placeholder:text-muted-foreground"
+                data-tsd-source="/src/components/SearchBar.tsx:29:9"
+              /><button
+                type="submit"
+                aria-label="Search destinations"
+                class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-ink text-background shadow-pill transition-transform hover:scale-105"
+                data-tsd-source="/src/components/SearchBar.tsx:35:9"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-sliders-horizontal h-4 w-4"
+                  aria-hidden="true"
+                  data-tsd-source="/src/components/SearchBar.tsx:40:11"
+                >
+                  <path d="M10 5H3"></path>
+                  <path d="M12 19H3"></path>
+                  <path d="M14 3v4"></path>
+                  <path d="M16 17v4"></path>
+                  <path d="M21 12h-9"></path>
+                  <path d="M21 19h-5"></path>
+                  <path d="M21 5h-7"></path>
+                  <path d="M8 10v4"></path>
+                  <path d="M8 12H3"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section
+        class="px-4 pt-8 md:px-6 md:pt-14"
+        data-tsd-source="/src/routes/index.tsx:34:7"
+      >
+        <div
+          class="mx-auto max-w-6xl rounded-[2rem] bg-card p-5 shadow-float md:rounded-[2.5rem] md:p-10"
+          data-tsd-source="/src/routes/index.tsx:35:9"
+        >
+          <div
+            class="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4"
+            data-tsd-source="/src/routes/index.tsx:36:11"
+          >
+            <div class="min-w-0" data-tsd-source="/src/routes/index.tsx:37:13">
+              <h2
+                class="text-xl font-extrabold md:text-3xl"
+                data-tsd-source="/src/routes/index.tsx:38:15"
+              >
+                Featured Places
+              </h2>
+              <p
+                class="mt-1 text-sm text-muted-foreground"
+                data-tsd-source="/src/routes/index.tsx:39:15"
+              >
+                Most trending places on last 2 weeks
+              </p>
+            </div>
+            <a
+              data-tsd-source="/src/routes/index.tsx:43:13"
+              href="/explore"
+              class="shrink-0 text-xs font-semibold text-ocean"
+              >See All</a
+            >
+          </div>
+          <div
+            class="no-scrollbar mt-5 flex gap-4 overflow-x-auto pb-1 md:grid md:grid-cols-3 md:overflow-visible lg:grid-cols-4"
+            data-tsd-source="/src/routes/index.tsx:48:11"
+          >
+            <article
+              class="group relative aspect-[3/4] shrink-0 overflow-hidden rounded-3xl shadow-soft w-[62%] max-w-[240px] md:w-auto md:max-w-none"
+              data-tsd-source="/src/components/FeaturedDestinationCard.tsx:13:5"
+            >
+              <img
+                src="/src/assets/hero-krabi.jpg"
+                alt="Ao Nang, Krabi, Thailand"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:16:7"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-black/10"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:22:7"
+              ></div>
+              <a
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:24:7"
+                href="/destination/ao-nang-krabi"
+                class="absolute right-3 top-3 rounded-full bg-ink px-4 py-2 text-xs font-semibold text-background shadow-pill transition-transform hover:scale-105"
+                >Book Now</a
+              >
+              <div
+                class="absolute inset-x-0 bottom-0 p-4"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:32:7"
+              >
+                <h3
+                  class="truncate text-[15px] font-bold text-white"
+                  data-tsd-source="/src/components/FeaturedDestinationCard.tsx:33:9"
+                >
+                  Ao Nang, Krabi
+                </h3>
+                <div
+                  class="mt-0.5 flex items-center justify-between gap-2"
+                  data-tsd-source="/src/components/FeaturedDestinationCard.tsx:34:9"
+                >
+                  <p
+                    class="truncate text-xs text-white/80"
+                    data-tsd-source="/src/components/FeaturedDestinationCard.tsx:35:11"
+                  >
+                    Thailand
+                  </p>
+                  <span
+                    class="flex shrink-0 items-center gap-1 text-xs font-semibold text-white"
+                    data-tsd-source="/src/components/FeaturedDestinationCard.tsx:36:11"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star h-3.5 w-3.5 fill-amber-300 text-amber-300"
+                      aria-hidden="true"
+                      data-tsd-source="/src/components/FeaturedDestinationCard.tsx:37:13"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      ></path></svg
+                    >4.9</span
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="group relative aspect-[3/4] shrink-0 overflow-hidden rounded-3xl shadow-soft w-[62%] max-w-[240px] md:w-auto md:max-w-none"
+              data-tsd-source="/src/components/FeaturedDestinationCard.tsx:13:5"
+            >
+              <img
+                src="/src/assets/dest-tahiti.jpg"
+                alt="Tahiti Beach, Polynesia, French"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:16:7"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-black/10"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:22:7"
+              ></div>
+              <a
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:24:7"
+                href="/destination/tahiti-beach"
+                class="absolute right-3 top-3 rounded-full bg-ink px-4 py-2 text-xs font-semibold text-background shadow-pill transition-transform hover:scale-105"
+                >Book Now</a
+              >
+              <div
+                class="absolute inset-x-0 bottom-0 p-4"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:32:7"
+              >
+                <h3
+                  class="truncate text-[15px] font-bold text-white"
+                  data-tsd-source="/src/components/FeaturedDestinationCard.tsx:33:9"
+                >
+                  Tahiti Beach
+                </h3>
+                <div
+                  class="mt-0.5 flex items-center justify-between gap-2"
+                  data-tsd-source="/src/components/FeaturedDestinationCard.tsx:34:9"
+                >
+                  <p
+                    class="truncate text-xs text-white/80"
+                    data-tsd-source="/src/components/FeaturedDestinationCard.tsx:35:11"
+                  >
+                    Polynesia, French
+                  </p>
+                  <span
+                    class="flex shrink-0 items-center gap-1 text-xs font-semibold text-white"
+                    data-tsd-source="/src/components/FeaturedDestinationCard.tsx:36:11"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star h-3.5 w-3.5 fill-amber-300 text-amber-300"
+                      aria-hidden="true"
+                      data-tsd-source="/src/components/FeaturedDestinationCard.tsx:37:13"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      ></path></svg
+                    >4.8</span
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="group relative aspect-[3/4] shrink-0 overflow-hidden rounded-3xl shadow-soft w-[62%] max-w-[240px] md:w-auto md:max-w-none"
+              data-tsd-source="/src/components/FeaturedDestinationCard.tsx:13:5"
+            >
+              <img
+                src="/src/assets/dest-obernberg.jpg"
+                alt="Obernberg am Brenner, Austria"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:16:7"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-black/10"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:22:7"
+              ></div>
+              <a
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:24:7"
+                href="/destination/obernberg-am-brenner"
+                class="absolute right-3 top-3 rounded-full bg-ink px-4 py-2 text-xs font-semibold text-background shadow-pill transition-transform hover:scale-105"
+                >Book Now</a
+              >
+              <div
+                class="absolute inset-x-0 bottom-0 p-4"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:32:7"
+              >
+                <h3
+                  class="truncate text-[15px] font-bold text-white"
+                  data-tsd-source="/src/components/FeaturedDestinationCard.tsx:33:9"
+                >
+                  Obernberg am Brenner
+                </h3>
+                <div
+                  class="mt-0.5 flex items-center justify-between gap-2"
+                  data-tsd-source="/src/components/FeaturedDestinationCard.tsx:34:9"
+                >
+                  <p
+                    class="truncate text-xs text-white/80"
+                    data-tsd-source="/src/components/FeaturedDestinationCard.tsx:35:11"
+                  >
+                    Austria
+                  </p>
+                  <span
+                    class="flex shrink-0 items-center gap-1 text-xs font-semibold text-white"
+                    data-tsd-source="/src/components/FeaturedDestinationCard.tsx:36:11"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star h-3.5 w-3.5 fill-amber-300 text-amber-300"
+                      aria-hidden="true"
+                      data-tsd-source="/src/components/FeaturedDestinationCard.tsx:37:13"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      ></path></svg
+                    >4.7</span
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="group relative aspect-[3/4] shrink-0 overflow-hidden rounded-3xl shadow-soft w-[62%] max-w-[240px] md:w-auto md:max-w-none"
+              data-tsd-source="/src/components/FeaturedDestinationCard.tsx:13:5"
+            >
+              <img
+                src="/src/assets/dest-maldives.jpg"
+                alt="Baa Atoll, Maldives"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:16:7"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-black/10"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:22:7"
+              ></div>
+              <a
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:24:7"
+                href="/destination/baa-atoll"
+                class="absolute right-3 top-3 rounded-full bg-ink px-4 py-2 text-xs font-semibold text-background shadow-pill transition-transform hover:scale-105"
+                >Book Now</a
+              >
+              <div
+                class="absolute inset-x-0 bottom-0 p-4"
+                data-tsd-source="/src/components/FeaturedDestinationCard.tsx:32:7"
+              >
+                <h3
+                  class="truncate text-[15px] font-bold text-white"
+                  data-tsd-source="/src/components/FeaturedDestinationCard.tsx:33:9"
+                >
+                  Baa Atoll
+                </h3>
+                <div
+                  class="mt-0.5 flex items-center justify-between gap-2"
+                  data-tsd-source="/src/components/FeaturedDestinationCard.tsx:34:9"
+                >
+                  <p
+                    class="truncate text-xs text-white/80"
+                    data-tsd-source="/src/components/FeaturedDestinationCard.tsx:35:11"
+                  >
+                    Maldives
+                  </p>
+                  <span
+                    class="flex shrink-0 items-center gap-1 text-xs font-semibold text-white"
+                    data-tsd-source="/src/components/FeaturedDestinationCard.tsx:36:11"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-star h-3.5 w-3.5 fill-amber-300 text-amber-300"
+                      aria-hidden="true"
+                      data-tsd-source="/src/components/FeaturedDestinationCard.tsx:37:13"
+                    >
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                      ></path></svg
+                    >5.0</span
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            class="mt-10 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4"
+            data-tsd-source="/src/routes/index.tsx:58:11"
+          >
+            <div class="min-w-0" data-tsd-source="/src/routes/index.tsx:59:13">
+              <h2
+                class="text-xl font-extrabold md:text-3xl"
+                data-tsd-source="/src/routes/index.tsx:60:15"
+              >
+                Categories
+              </h2>
+              <p
+                class="mt-1 text-sm text-muted-foreground"
+                data-tsd-source="/src/routes/index.tsx:61:15"
+              >
+                According to your personal taste
+              </p>
+            </div>
+            <a
+              data-tsd-source="/src/routes/index.tsx:65:13"
+              href="/explore"
+              class="shrink-0 text-xs font-semibold text-ocean"
+              >See All</a
+            >
+          </div>
+          <div
+            class="no-scrollbar mt-5 flex gap-3 overflow-x-auto pb-1 md:gap-4"
+            data-tsd-source="/src/routes/index.tsx:70:11"
+          >
+            <button
+              type="button"
+              class="group relative h-28 w-24 shrink-0 overflow-hidden rounded-2xl shadow-soft sm:h-32 sm:w-28"
+              data-tsd-source="/src/components/CategoryCard.tsx:3:5"
+            >
+              <img
+                src="/src/assets/cat-beaches.jpg"
+                alt="Beaches"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-tsd-source="/src/components/CategoryCard.tsx:7:7"
+              /><span
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                data-tsd-source="/src/components/CategoryCard.tsx:13:7"
+              ></span
+              ><span
+                class="absolute inset-x-0 bottom-0 p-2.5 text-left text-xs font-semibold text-white"
+                data-tsd-source="/src/components/CategoryCard.tsx:14:7"
+                >Beaches</span
+              ></button
+            ><button
+              type="button"
+              class="group relative h-28 w-24 shrink-0 overflow-hidden rounded-2xl shadow-soft sm:h-32 sm:w-28"
+              data-tsd-source="/src/components/CategoryCard.tsx:3:5"
+            >
+              <img
+                src="/src/assets/cat-forests.jpg"
+                alt="Forests"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-tsd-source="/src/components/CategoryCard.tsx:7:7"
+              /><span
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                data-tsd-source="/src/components/CategoryCard.tsx:13:7"
+              ></span
+              ><span
+                class="absolute inset-x-0 bottom-0 p-2.5 text-left text-xs font-semibold text-white"
+                data-tsd-source="/src/components/CategoryCard.tsx:14:7"
+                >Forests</span
+              ></button
+            ><button
+              type="button"
+              class="group relative h-28 w-24 shrink-0 overflow-hidden rounded-2xl shadow-soft sm:h-32 sm:w-28"
+              data-tsd-source="/src/components/CategoryCard.tsx:3:5"
+            >
+              <img
+                src="/src/assets/cat-historical.jpg"
+                alt="Historical"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-tsd-source="/src/components/CategoryCard.tsx:7:7"
+              /><span
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                data-tsd-source="/src/components/CategoryCard.tsx:13:7"
+              ></span
+              ><span
+                class="absolute inset-x-0 bottom-0 p-2.5 text-left text-xs font-semibold text-white"
+                data-tsd-source="/src/components/CategoryCard.tsx:14:7"
+                >Historical</span
+              ></button
+            ><button
+              type="button"
+              class="group relative h-28 w-24 shrink-0 overflow-hidden rounded-2xl shadow-soft sm:h-32 sm:w-28"
+              data-tsd-source="/src/components/CategoryCard.tsx:3:5"
+            >
+              <img
+                src="/src/assets/cat-wildlife.jpg"
+                alt="Wild Life"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-tsd-source="/src/components/CategoryCard.tsx:7:7"
+              /><span
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                data-tsd-source="/src/components/CategoryCard.tsx:13:7"
+              ></span
+              ><span
+                class="absolute inset-x-0 bottom-0 p-2.5 text-left text-xs font-semibold text-white"
+                data-tsd-source="/src/components/CategoryCard.tsx:14:7"
+                >Wild Life</span
+              ></button
+            ><button
+              type="button"
+              class="group relative h-28 w-24 shrink-0 overflow-hidden rounded-2xl shadow-soft sm:h-32 sm:w-28"
+              data-tsd-source="/src/components/CategoryCard.tsx:3:5"
+            >
+              <img
+                src="/src/assets/cat-mountains.jpg"
+                alt="Mountains"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-tsd-source="/src/components/CategoryCard.tsx:7:7"
+              /><span
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                data-tsd-source="/src/components/CategoryCard.tsx:13:7"
+              ></span
+              ><span
+                class="absolute inset-x-0 bottom-0 p-2.5 text-left text-xs font-semibold text-white"
+                data-tsd-source="/src/components/CategoryCard.tsx:14:7"
+                >Mountains</span
+              ></button
+            ><button
+              type="button"
+              class="group relative h-28 w-24 shrink-0 overflow-hidden rounded-2xl shadow-soft sm:h-32 sm:w-28"
+              data-tsd-source="/src/components/CategoryCard.tsx:3:5"
+            >
+              <img
+                src="/src/assets/cat-cities.jpg"
+                alt="Cities"
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-tsd-source="/src/components/CategoryCard.tsx:7:7"
+              /><span
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                data-tsd-source="/src/components/CategoryCard.tsx:13:7"
+              ></span
+              ><span
+                class="absolute inset-x-0 bottom-0 p-2.5 text-left text-xs font-semibold text-white"
+                data-tsd-source="/src/components/CategoryCard.tsx:14:7"
+                >Cities</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="px-4 py-8 md:px-6 md:py-16"
+        data-tsd-source="/src/components/MapExperienceSection.tsx:12:5"
+      >
+        <div
+          class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] shadow-float md:rounded-[2.5rem]"
+          data-tsd-source="/src/components/MapExperienceSection.tsx:13:7"
+        >
+          <img
+            src="/src/assets/dest-tahiti.jpg"
+            alt="Experience at Tahiti Beach"
+            loading="lazy"
+            class="h-[70svh] w-full object-cover md:h-[80vh]"
+            data-tsd-source="/src/components/MapExperienceSection.tsx:14:9"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/35"
+            data-tsd-source="/src/components/MapExperienceSection.tsx:20:9"
+          ></div>
+          <div
+            class="absolute left-1/2 top-16 flex -translate-x-1/2 flex-col items-center gap-2"
+            data-tsd-source="/src/components/MapExperienceSection.tsx:22:9"
+          >
+            <span
+              class="glass rounded-full px-5 py-2 text-sm font-semibold text-ink shadow-soft"
+              data-tsd-source="/src/components/MapExperienceSection.tsx:23:11"
+              >Swimming</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-up h-4 w-4 text-white/70"
+              aria-hidden="true"
+              data-tsd-source="/src/components/MapExperienceSection.tsx:26:11"
+            >
+              <path d="m18 15-6-6-6 6"></path></svg
+            ><span
+              class="h-24 w-px bg-white/60"
+              data-tsd-source="/src/components/MapExperienceSection.tsx:27:11"
+            ></span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-down h-5 w-5 text-white/85"
+              aria-hidden="true"
+              data-tsd-source="/src/components/MapExperienceSection.tsx:28:11"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </div>
+          <div
+            class="absolute inset-x-0 bottom-8 flex flex-col items-center gap-3"
+            data-tsd-source="/src/components/MapExperienceSection.tsx:31:9"
+          >
+            <p
+              class="label-xs text-white/75"
+              data-tsd-source="/src/components/MapExperienceSection.tsx:32:11"
+            >
+              Polynesia, French
+            </p>
+            <button
+              type="button"
+              aria-label="Capture this experience"
+              class="h-14 w-14 rounded-full bg-white/90 shadow-float ring-4 ring-white/40 transition-transform hover:scale-105"
+              data-tsd-source="/src/components/MapExperienceSection.tsx:33:11"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      (function (a, f) {
+        let l;
+        try {
+          l = JSON.parse(sessionStorage.getItem(a) || "{}");
+        } catch {
+          return;
+        }
+        const n = l?.[f || history.state?.__TSR_key];
+        let c = !1;
+        for (const t in n) {
+          const e = n[t],
+            o = e?.scrollX,
+            s = e?.scrollY;
+          if (Number.isFinite(o) && Number.isFinite(s)) {
+            if (t === "window") (scrollTo(o, s), (c = !0));
+            else if (t)
+              try {
+                const r = document.querySelector(t);
+                r && ((r.scrollLeft = o), (r.scrollTop = s));
+              } catch {}
+          }
+        }
+        if (c) return;
+        const i = location.hash.slice(1);
+        if (i) {
+          const t = history.state?.__hashScrollIntoViewOptions ?? !0;
+          if (t) {
+            const e = document.getElementById(i);
+            e && e.scrollIntoView(t);
+          }
+          return;
+        }
+        scrollTo(0, 0);
+      })("tsr-scroll-restoration-v1_3");
+      document.currentScript.remove();
+    </script>
+    <!--/$-->
+    <nav
+      aria-label="Primary"
+      class="fixed inset-x-0 bottom-0 z-50 px-4 pb-4 md:hidden"
+      data-tsd-source="/src/components/BottomNavigation.tsx:20:5"
+    >
+      <ul
+        class="glass mx-auto flex max-w-md items-center justify-between rounded-3xl px-3 py-2.5 shadow-float"
+        data-tsd-source="/src/components/BottomNavigation.tsx:24:7"
+      >
+        <li
+          class="flex-1"
+          data-tsd-source="/src/components/BottomNavigation.tsx:26:11"
+        >
+          <a
+            aria-label="Home"
+            data-tsd-source="/src/components/BottomNavigation.tsx:27:13"
+            class="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl text-muted-foreground transition-colors bg-white text-teal shadow-soft"
+            href="/"
+            data-status="active"
+            aria-current="page"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-house h-5 w-5"
+              aria-hidden="true"
+              data-tsd-source="/src/components/BottomNavigation.tsx:34:15"
+            >
+              <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+              <path
+                d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+              ></path></svg
+          ></a>
+        </li>
+        <li
+          class="flex-1"
+          data-tsd-source="/src/components/BottomNavigation.tsx:26:11"
+        >
+          <a
+            aria-label="Explore"
+            data-tsd-source="/src/components/BottomNavigation.tsx:27:13"
+            href="/explore"
+            class="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl text-muted-foreground transition-colors"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search h-5 w-5"
+              aria-hidden="true"
+              data-tsd-source="/src/components/BottomNavigation.tsx:34:15"
+            >
+              <path d="m21 21-4.34-4.34"></path>
+              <circle cx="11" cy="11" r="8"></circle></svg
+          ></a>
+        </li>
+        <li
+          class="flex-1"
+          data-tsd-source="/src/components/BottomNavigation.tsx:26:11"
+        >
+          <a
+            aria-label="Packages"
+            data-tsd-source="/src/components/BottomNavigation.tsx:27:13"
+            href="/packages"
+            class="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl text-muted-foreground transition-colors"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-package h-5 w-5"
+              aria-hidden="true"
+              data-tsd-source="/src/components/BottomNavigation.tsx:34:15"
+            >
+              <path
+                d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+              ></path>
+              <path d="M12 22V12"></path>
+              <polyline points="3.29 7 12 12 20.71 7"></polyline>
+              <path d="m7.5 4.27 9 5.15"></path></svg
+          ></a>
+        </li>
+        <li
+          class="flex-1"
+          data-tsd-source="/src/components/BottomNavigation.tsx:26:11"
+        >
+          <a
+            aria-label="Customize"
+            data-tsd-source="/src/components/BottomNavigation.tsx:27:13"
+            href="/customize"
+            class="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl text-muted-foreground transition-colors"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-clipboard-list h-5 w-5"
+              aria-hidden="true"
+              data-tsd-source="/src/components/BottomNavigation.tsx:34:15"
+            >
+              <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+              <path
+                d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+              ></path>
+              <path d="M12 11h4"></path>
+              <path d="M12 16h4"></path>
+              <path d="M8 11h.01"></path>
+              <path d="M8 16h.01"></path></svg
+          ></a>
+        </li>
+        <li
+          class="flex-1"
+          data-tsd-source="/src/components/BottomNavigation.tsx:26:11"
+        >
+          <a
+            aria-label="Contact"
+            data-tsd-source="/src/components/BottomNavigation.tsx:27:13"
+            href="/contact"
+            class="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl text-muted-foreground transition-colors"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-phone h-5 w-5"
+              aria-hidden="true"
+              data-tsd-source="/src/components/BottomNavigation.tsx:34:15"
+            >
+              <path
+                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+              ></path></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <script class="$tsr" id="$tsr-stream-barrier">
+      (self.$R = self.$R || {})["tsr"] = [];
+      self.$_TSR = {
+        h() {
+          ((this.hydrated = !0), this.c());
+        },
+        e() {
+          ((this.streamEnded = !0), this.c());
+        },
+        c() {
+          this.hydrated &&
+            this.streamEnded &&
+            (delete self.$_TSR, delete self.$R.tsr);
+        },
+        p(e) {
+          this.initialized ? e() : this.buffer.push(e);
+        },
+        buffer: [],
+      };
+      $_TSR.router = (($R) =>
+        ($R[0] = {
+          manifest: ($R[1] = {
+            routes: ($R[2] = {
+              __root__: ($R[3] = {
+                preloads: ($R[4] = [
+                  "/@id/virtual:tanstack-start-dev-client-entry",
+                ]),
+                scripts: ($R[5] = [
+                  ($R[6] = {
+                    attrs: ($R[7] = {
+                      type: "module",
+                      async: !0,
+                      src: "/@id/virtual:tanstack-start-dev-client-entry",
+                    }),
+                  }),
+                ]),
+                css: ($R[8] = [
+                  ($R[9] = {
+                    href: "/@tanstack-start/styles.css?routes=__root__%2C%2F",
+                    "data-tanstack-router-dev-styles": !0,
+                  }),
+                ]),
+              }),
+            }),
+          }),
+          matches: ($R[10] = [
+            ($R[11] = {
+              i: "__root__ ",
+              u: 1788137302371,
+              s: "success",
+              ssr: !0,
+            }),
+            ($R[12] = { i: "  ", u: 1788137302480, s: "success", ssr: !0 }),
+          ]),
+          lastMatchId: "  ",
+        }))($R["tsr"]);
+      $_TSR.e();
+      document.currentScript.remove();
+    </script>
+    <script
+      type="module"
+      async=""
+      src="/@id/virtual:tanstack-start-dev-client-entry"
+    ></script>
+  </body>
+</html>
