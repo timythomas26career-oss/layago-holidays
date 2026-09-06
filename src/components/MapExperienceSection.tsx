@@ -43,45 +43,47 @@ export function MapExperienceSection({
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] shadow-float md:hidden md:rounded-[2.5rem]"
+        className="relative mx-auto flex max-w-6xl flex-col overflow-hidden rounded-[2rem] shadow-float md:hidden md:rounded-[2.5rem]"
         style={{
           transform: `scale(${active ? 1.03 : hoverScale})`,
           transition: "transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)",
         }}
       >
         {/* Image */}
-        <div
-          className="h-[55svh] w-full overflow-hidden"
-          style={{
-            transform: `translate(${parallaxX}px, ${parallaxY}px) scale(${hover && !active ? 1.08 : 1.02})`,
-            transition: active
-              ? "transform 0.12s ease-out"
-              : "transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)",
-          }}
-        >
-          <img
-            src={destination.image}
-            alt={`Experience at ${destination.name}`}
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
+        <div className="relative h-[55svh] w-full shrink-0 overflow-hidden">
+          <div
+            className="h-full w-full"
+            style={{
+              transform: `translate(${parallaxX}px, ${parallaxY}px) scale(${hover && !active ? 1.08 : 1.02})`,
+              transition: active
+                ? "transform 0.12s ease-out"
+                : "transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)",
+            }}
+          >
+            <img
+              src={destination.image}
+              alt={`Experience at ${destination.name}`}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
+
+          {/* Title pill — top */}
+          <div className="absolute left-1/2 top-8 flex -translate-x-1/2 flex-col items-center gap-2">
+            <span className="glass rounded-full px-5 py-2 text-sm font-semibold text-ink shadow-soft">
+              {label}
+            </span>
+            <ChevronUp className="h-4 w-4 text-white/70" />
+            <span className="h-20 w-px bg-white/60" />
+            <ChevronDown className="h-5 w-5 text-white/85" />
+          </div>
         </div>
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
-
-        {/* Title pill — top */}
-        <div className="absolute left-1/2 top-8 flex -translate-x-1/2 flex-col items-center gap-2">
-          <span className="glass rounded-full px-5 py-2 text-sm font-semibold text-ink shadow-soft">
-            {label}
-          </span>
-          <ChevronUp className="h-4 w-4 text-white/70" />
-          <span className="h-20 w-px bg-white/60" />
-          <ChevronDown className="h-5 w-5 text-white/85" />
-        </div>
-
-        {/* Bottom content zone — clear vertical stacking */}
-        <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-0 px-5 pb-6 pt-10">
+        {/* Content zone — normal flow, no overlap */}
+        <div className="flex flex-col items-center bg-gradient-to-b from-black/70 to-black/90 px-5 pb-8 pt-5">
           {/* Location */}
           <p className="label-xs text-white/75">{destination.location}</p>
 
@@ -90,9 +92,9 @@ export function MapExperienceSection({
             {active ? destination.overview : destination.overview.slice(0, 82) + "…"}
           </p>
 
-          {/* Activity pills — only when active, stacked vertically */}
+          {/* Activity pills — stacked vertically */}
           {active && (
-            <div className="mt-4 flex w-full max-w-xs flex-col items-center gap-2">
+            <div className="mt-4 flex w-full max-w-xs flex-col gap-2">
               {destination.tags.map((tag) => (
                 <span
                   key={tag}
@@ -104,12 +106,12 @@ export function MapExperienceSection({
             </div>
           )}
 
-          {/* + button — always in its own area at the bottom */}
+          {/* + button — own area below everything */}
           <button
             type="button"
             aria-label={active ? "Close experience" : "Open experience"}
             onClick={() => setActive((a) => !a)}
-            className={`mt-5 h-14 w-14 shrink-0 rounded-full shadow-float ring-4 ring-white/40 transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/90 text-ink"}`}
+            className={`mt-6 h-14 w-14 shrink-0 rounded-full shadow-float ring-4 ring-white/40 transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/90 text-ink"}`}
           >
             <span className="block rotate-[-45deg]">+</span>
           </button>
