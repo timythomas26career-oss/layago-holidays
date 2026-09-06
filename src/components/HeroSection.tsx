@@ -30,9 +30,7 @@ export function HeroSection({ featured }: { featured: Destination }) {
           <div className="max-w-xl">
             <p className="label-xs text-white/75">Featured</p>
             <h1 className="mt-2 text-[2.75rem] leading-[0.95] font-extrabold text-white md:text-6xl">
-              {featured.name.split(",")[0]}
-              <br />
-              {featured.name.split(",")[1]?.trim() ?? featured.location}
+              {featured.name}
             </h1>
             <p className="mt-3 flex items-center gap-1.5 text-sm text-white/85">
               <MapPin className="h-4 w-4" />
