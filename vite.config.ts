@@ -5,11 +5,13 @@ import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
+const isBuild = process.argv.includes("build");
+
 export default defineConfig({
   plugins: [
     tailwindcss(),
     tanstackStart(),
-    netlify(),
+    isBuild && netlify(),
     viteReact(),
     tsConfigPaths(),
   ],
