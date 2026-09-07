@@ -4,7 +4,7 @@ import type { Destination } from "@/lib/destinations";
 
 export function HeroSection({ featured }: { featured: Destination }) {
   return (
-    <section className="px-4 pt-4 md:px-6 md:pt-24">
+    <section className="px-4 pt-4 md:px-6 md:pt-6">
       <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] shadow-float md:rounded-[2.5rem]">
         <img
           src={featured.image}
