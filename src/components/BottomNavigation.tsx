@@ -23,20 +23,19 @@ export function BottomNavigation() {
       )}
       <nav
         aria-label="Primary"
-        className="fixed inset-x-0 bottom-0 z-[70] px-4 pb-3 md:hidden"
+        className="fixed inset-x-0 bottom-0 z-[70] px-3 pb-3 md:hidden"
       >
-        {/* Frosted pill — matches screenshot: translucent white, rounded-full */}
-        <ul className="mx-auto flex max-w-[360px] items-center justify-between rounded-full bg-white/80 px-2 py-2 shadow-[0_12px_40px_rgba(0,0,0,0.16)] backdrop-blur-xl">
+        <ul className="mx-auto flex max-w-[340px] items-center justify-between rounded-full bg-white/80 px-1.5 py-1.5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-xl">
           {items.map(({ to, label, Icon, exact }) => (
             <li key={label} className="flex-1">
               <Link
                 to={to}
                 aria-label={label}
                 activeOptions={{ exact }}
-                className="mx-auto flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground/70 transition-colors"
-                activeProps={{ className: "bg-white text-teal shadow-soft" }}
+                className="mx-auto flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground/60 transition-colors"
+                activeProps={{ className: "bg-teal/10 text-teal" }}
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-[18px] w-[18px]" strokeWidth={2} />
               </Link>
             </li>
           ))}
@@ -46,32 +45,32 @@ export function BottomNavigation() {
               aria-label="More"
               aria-expanded={open}
               onClick={() => setOpen((o) => !o)}
-              className={`mx-auto flex h-11 w-11 items-center justify-center rounded-full transition-colors ${
+              className={`mx-auto flex h-10 w-10 items-center justify-center rounded-full transition-colors ${
                 open
-                  ? "bg-ink text-white shadow-soft"
-                  : "text-muted-foreground/70"
+                  ? "bg-ink text-white"
+                  : "text-muted-foreground/60"
               }`}
             >
               {open ? (
-                <X className="h-5 w-5" />
+                <X className="h-[18px] w-[18px]" strokeWidth={2} />
               ) : (
-                <Ellipsis className="h-6 w-6" />
+                <Ellipsis className="h-5 w-5" strokeWidth={2} />
               )}
             </button>
           </li>
         </ul>
 
         {open && (
-          <div className="mx-auto mt-3 max-w-[360px] rounded-[22px] bg-white p-2 shadow-[0_12px_40px_rgba(0,0,0,0.16)]">
+          <div className="mx-auto mt-2 max-w-[340px] overflow-hidden rounded-2xl bg-white shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
             {moreItems.map(({ to, label, Icon }) => (
               <Link
                 key={label}
                 to={to}
                 onClick={() => setOpen(false)}
                 activeProps={{ className: "bg-surface text-teal-deep" }}
-                className="flex items-center gap-3 rounded-2xl px-3 py-2.5 text-sm font-medium text-foreground"
+                className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-foreground"
               >
-                <Icon className="h-5 w-5 text-muted-foreground" />
+                <Icon className="h-[18px] w-[18px] text-muted-foreground" strokeWidth={2} />
                 {label}
               </Link>
             ))}

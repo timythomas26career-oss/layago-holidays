@@ -14,7 +14,6 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 pt-12 pb-28 md:pt-16 md:pb-12">
         {/* Desktop / Tablet */}
         <div className="hidden grid-cols-[1.2fr_1fr_1fr] items-start gap-10 md:grid">
-          {/* Brand */}
           <div>
             <p className="text-sm font-bold tracking-tight text-foreground">
               Layago Holidays
@@ -24,7 +23,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Nav links */}
           <div>
             <p className="label-xs text-muted-foreground">Navigate</p>
             <ul className="mt-3 flex flex-col gap-2.5">
@@ -41,7 +39,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* CTA */}
           <div>
             <p className="label-xs text-muted-foreground">Ready to travel?</p>
             <p className="mt-3 text-sm text-muted-foreground">
@@ -57,30 +54,29 @@ export function Footer() {
         </div>
 
         {/* Mobile */}
-        <div className="flex flex-col items-center text-center md:hidden">
+        <div className="flex flex-col md:hidden">
           <p className="text-sm font-bold tracking-tight text-foreground">
             Layago Holidays
           </p>
-          <p className="mt-2 text-xs text-muted-foreground">
+          <p className="mt-1.5 text-xs text-muted-foreground">
             Handcrafted journeys across India's finest destinations.
           </p>
 
-          <ul className="mt-6 flex flex-col gap-3">
+          <div className="mt-7 flex flex-col gap-3">
             {navLinks.map((l) => (
-              <li key={l.label}>
-                <Link
-                  to={l.to}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {l.label}
-                </Link>
-              </li>
+              <Link
+                key={l.label}
+                to={l.to}
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {l.label}
+              </Link>
             ))}
-          </ul>
+          </div>
 
           <Link
             to="/customize"
-            className="mt-6 inline-flex items-center rounded-full bg-ink px-6 py-2.5 text-sm font-semibold text-background shadow-pill transition-transform hover:-translate-y-0.5"
+            className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-background shadow-pill transition-transform hover:-translate-y-0.5"
           >
             Plan Your Trip
           </Link>
