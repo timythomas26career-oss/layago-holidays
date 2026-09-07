@@ -82,7 +82,7 @@ export function MapExperienceSection({
           </div>
 
           {/* Content — overlaid at bottom of image */}
-          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center px-5 pb-6 pt-10">
+          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center px-5 pb-5 pt-10">
             {/* Location */}
             <p className="label-xs text-white/75">{destination.location}</p>
 
@@ -93,11 +93,11 @@ export function MapExperienceSection({
 
             {/* Activity pills — stacked vertically */}
             {active && (
-              <div className="mt-4 flex w-full max-w-xs flex-col gap-2">
+              <div className="mt-3 flex w-full max-w-xs flex-col gap-1.5">
                 {destination.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="w-full text-center rounded-full bg-white/20 px-4 py-2 text-xs text-white/90 backdrop-blur-sm"
+                    className="w-full text-center rounded-full bg-white/20 px-4 py-1.5 text-xs text-white/90 backdrop-blur-sm"
                   >
                     {tag}
                   </span>
@@ -105,14 +105,14 @@ export function MapExperienceSection({
               </div>
             )}
 
-            {/* + button */}
+            {/* + button — small and minimal */}
             <button
               type="button"
               aria-label={active ? "Close experience" : "Open experience"}
               onClick={() => setActive((a) => !a)}
-              className={`mt-5 h-14 w-14 shrink-0 rounded-full shadow-float ring-4 ring-white/40 transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/90 text-ink"}`}
+              className={`mt-4 h-10 w-10 shrink-0 rounded-full transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/80 text-ink"}`}
             >
-              <span className="block rotate-[-45deg]">+</span>
+              <span className="block rotate-[-45deg] text-lg font-light">+</span>
             </button>
           </div>
         </div>
@@ -195,9 +195,9 @@ export function MapExperienceSection({
             type="button"
             aria-label={active ? "Close experience" : "Open experience"}
             onClick={() => setActive((a) => !a)}
-            className={`h-14 w-14 rounded-full shadow-float ring-4 ring-white/40 transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/90 text-ink"}`}
+            className={`h-10 w-10 rounded-full transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/80 text-ink"}`}
           >
-            <span className="block rotate-[-45deg]">+</span>
+            <span className="block rotate-[-45deg] text-lg font-light">+</span>
           </button>
         </div>
       </div>
