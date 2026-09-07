@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLayagoError } from "../lib/error-reporting";
 import { DesktopNavigation } from "@/components/DesktopNavigation";
 import { BottomNavigation } from "@/components/BottomNavigation";
+import { Footer } from "@/components/Footer";
 
 function NotFoundComponent() {
   return (
@@ -138,20 +139,7 @@ function RootComponent() {
       <DesktopNavigation />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
-      <footer className="hidden border-t border-border/60 bg-surface/50 py-10 text-center md:block">
-        <p className="text-sm font-semibold text-foreground">Layago Holidays</p>
-        <p className="mt-1 text-xs text-muted-foreground">
-          Handcrafted journeys across India's finest destinations.
-        </p>
-        <div className="mt-4 flex items-center justify-center gap-6 text-xs text-muted-foreground">
-          <Link to="/about" className="hover:text-foreground">
-            About
-          </Link>
-          <Link to="/contact" className="hover:text-foreground">
-            Inquiry
-          </Link>
-        </div>
-      </footer>
+      <Footer />
       <BottomNavigation />
     </QueryClientProvider>
   );
