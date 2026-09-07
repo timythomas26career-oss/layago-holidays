@@ -111,9 +111,9 @@ export function MapExperienceSection({
             type="button"
             aria-label={active ? "Close experience" : "Open experience"}
             onClick={() => setActive((a) => !a)}
-            className={`mt-5 h-11 w-11 shrink-0 rounded-full transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/80 text-ink"}`}
+            className={`mt-6 h-14 w-14 shrink-0 rounded-full shadow-float ring-4 ring-white/40 transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/90 text-ink"}`}
           >
-            <span className="block rotate-[-45deg] text-lg font-light">+</span>
+            <span className="block rotate-[-45deg]">+</span>
           </button>
         </div>
       </div>
@@ -195,9 +195,9 @@ export function MapExperienceSection({
             type="button"
             aria-label={active ? "Close experience" : "Open experience"}
             onClick={() => setActive((a) => !a)}
-            className={`h-11 w-11 rounded-full transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/80 text-ink"}`}
+            className={`h-14 w-14 rounded-full shadow-float ring-4 ring-white/40 transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/90 text-ink"}`}
           >
-            <span className="block rotate-[-45deg] text-lg font-light">+</span>
+            <span className="block rotate-[-45deg]">+</span>
           </button>
         </div>
       </div>

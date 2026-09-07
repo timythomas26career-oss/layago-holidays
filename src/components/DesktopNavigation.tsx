@@ -15,16 +15,16 @@ const links = [
 
 export function DesktopNavigation() {
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 hidden justify-center px-6 pt-5 md:flex">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-3 md:px-6 md:pt-5">
       <nav
         aria-label="Main"
-        className="glass pointer-events-auto flex w-full max-w-6xl items-center gap-6 rounded-full px-3 py-2.5 shadow-soft"
+        className="glass pointer-events-auto flex w-full max-w-6xl items-center justify-between rounded-full px-3 py-2 shadow-soft md:gap-6 md:py-2.5"
       >
-        <Link to="/" className="flex min-w-0 items-center pl-3">
+        <Link to="/" className="flex min-w-0 items-center pl-2 md:pl-3">
           <img
             src={logo}
             alt="Layago Holidays"
-            className="h-8 w-auto object-contain"
+            className="h-7 w-auto object-contain md:h-8"
           />
         </Link>
 
@@ -43,7 +43,7 @@ export function DesktopNavigation() {
           ))}
         </ul>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="hidden shrink-0 items-center gap-2 md:flex">
           <Link
             to="/customize"
             className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-background shadow-pill transition-transform hover:-translate-y-0.5"
