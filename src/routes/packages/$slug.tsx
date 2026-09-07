@@ -7,16 +7,9 @@ import {
   X,
   Calendar,
   ArrowLeft,
-  Users,
 } from "lucide-react";
 import { getPackage, packages } from "@/lib/packages";
 import { destinations } from "@/lib/destinations";
-
-const PAX_TIERS = [
-  { pax: "2", label: "2 travelers", discount: 0 },
-  { pax: "4", label: "4 travelers", discount: 0.08 },
-  { pax: "6+", label: "6+ travelers", discount: 0.15 },
-] as const;
 
 export const Route = createFileRoute("/packages/$slug")({
   loader: ({ params }) => {
@@ -43,8 +36,6 @@ export const Route = createFileRoute("/packages/$slug")({
 
 function PackageDetailPage() {
   const { pkg } = Route.useLoaderData();
-  const tierPrice = (discount: number) =>
-    Math.round(pkg.price * (1 - discount));
   const gallery = [
     ...packages.filter(
       (p) =>
@@ -183,40 +174,10 @@ function PackageDetailPage() {
         </div>
 
         <div className="h-fit rounded-[2rem] bg-card p-6 shadow-float md:sticky md:top-28 md:p-8">
-          <p className="text-sm text-muted-foreground">
-            Per person by group size
-          </p>
-          <p className="mt-1 text-3xl font-extrabold">
-            ₹{pkg.price}{" "}
-            <span className="text-sm font-medium text-muted-foreground">
-              per person
-            </span>
-          </p>
-          {pkg.oldPrice && (
-            <p className="text-sm text-muted-foreground line-through">
-              ₹{pkg.oldPrice}
-            </p>
-          )}
-          <ul className="mt-5 grid gap-2">
-            {PAX_TIERS.map((tier) => (
-              <li
-                key={tier.pax}
-                className="flex items-center justify-between rounded-2xl bg-surface px-4 py-3"
-              >
-                <span className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-                  <Users className="h-4 w-4" />
-                  {tier.label}
-                </span>
-                <span className="text-sm font-bold">
-                  ₹{tierPrice(tier.discount)}/person
-                </span>
-              </li>
-            ))}
-          </ul>
           <Link
             to="/customize"
             search={{ destination: pkg.location, packageSlug: pkg.slug }}
-            className="mt-6 flex w-full justify-center gap-2 rounded-full bg-teal-deep px-6 py-4 text-sm font-bold text-white shadow-float hover:-translate-y-0.5 transition-transform"
+            className="flex w-full justify-center gap-2 rounded-full bg-teal-deep px-6 py-4 text-sm font-bold text-white shadow-float hover:-translate-y-0.5 transition-transform"
           >
             Plan This Trip
           </Link>

@@ -64,9 +64,6 @@ function PackagesPage() {
                 <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink shadow-soft">
                   {p.category}
                 </span>
-                <span className="absolute right-3 top-3 rounded-full bg-ink px-4 py-2 text-xs font-semibold text-white shadow-pill">
-                  From ₹{p.price}
-                </span>
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white">
                   <h3 className="truncate text-[16px] font-bold">{p.title}</h3>
                   <p className="mt-1 flex items-center gap-1.5 text-xs text-white/85">

@@ -90,7 +90,7 @@ export function MapExperienceSection({
 
             {active && (
               <div className="flex w-full max-w-xs flex-col gap-1.5">
-                {destination.tags.map((tag) => (
+                {destination.tags.slice(0, 3).map((tag) => (
                   <span
                     key={tag}
                     className="w-full text-center rounded-full bg-white/20 px-4 py-1.5 text-xs text-white/90 backdrop-blur-sm"
@@ -159,7 +159,7 @@ export function MapExperienceSection({
           )}
           {active && (
             <div className="flex flex-wrap justify-center gap-2">
-              {destination.tags.map((tag) => (
+              {destination.tags.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full bg-white/20 px-3 py-1 text-xs text-white/90 backdrop-blur-sm"
