@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLayagoError } from "../lib/error-reporting";
 import { DesktopNavigation } from "@/components/DesktopNavigation";
 import { BottomNavigation } from "@/components/BottomNavigation";
+import { Footer } from "@/components/Footer";
 
 function NotFoundComponent() {
   return (
@@ -138,6 +139,7 @@ function RootComponent() {
       <DesktopNavigation />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <Footer />
       <BottomNavigation />
     </QueryClientProvider>
   );
