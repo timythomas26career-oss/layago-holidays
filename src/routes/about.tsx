@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -37,17 +37,11 @@ function AboutPage() {
               No mass inventory. Small, design-led stays, fair to locals, honest
               to you. If we wouldn’t send our family, we won’t send you.
             </p>
-            <div className="mt-6 grid grid-cols-3 gap-3 text-center">
-              {[
-                { v: "12k+", l: "travelers" },
-                { v: "8", l: "destinations" },
-                { v: "4.8", l: "avg rating" },
-              ].map((s) => (
-                <div key={s.l} className="rounded-2xl bg-surface p-4">
-                  <p className="text-xl font-extrabold">{s.v}</p>
-                  <p className="text-xs text-muted-foreground">{s.l}</p>
-                </div>
-              ))}
+            <div className="mt-6 flex">
+              <div className="flex-1 rounded-2xl bg-surface p-4 text-center">
+                <p className="text-xl font-extrabold">8</p>
+                <p className="text-xs text-muted-foreground">destinations</p>
+              </div>
             </div>
           </div>
           <div className="grid gap-6">
@@ -59,19 +53,6 @@ function AboutPage() {
                 <li>3. Refine — 2–3 quick revisions</li>
                 <li>4. Go — on-trip support, not just pre-trip sales</li>
               </ol>
-            </div>
-            <div className="rounded-[2rem] bg-card p-6 shadow-float">
-              <h2 className="font-bold">Meet the team</h2>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Guides Emilia, Marco & Naia on call — plus ops across all 8
-                destinations. Small team, real humans.
-              </p>
-              <Link
-                to="/contact"
-                className="mt-4 inline-flex rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white"
-              >
-                Contact Us
-              </Link>
             </div>
           </div>
         </div>
