@@ -1,4 +1,3 @@
-import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState, useCallback, useRef } from "react";
 import type { Destination } from "@/lib/destinations";
 
@@ -43,14 +42,14 @@ export function MapExperienceSection({
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="relative mx-auto flex max-w-6xl flex-col overflow-hidden rounded-[2rem] shadow-float md:hidden md:rounded-[2.5rem]"
+        className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] shadow-float md:hidden md:rounded-[2.5rem]"
         style={{
           transform: `scale(${active ? 1.03 : hoverScale})`,
           transition: "transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)",
         }}
       >
-        {/* Image — fills the card */}
-        <div className="relative h-[70svh] w-full shrink-0 overflow-hidden">
+        {/* Image — fixed height */}
+        <div className="relative h-[50svh] w-full overflow-hidden">
           <div
             className="h-full w-full"
             style={{
@@ -67,54 +66,42 @@ export function MapExperienceSection({
               className="h-full w-full object-cover"
             />
           </div>
-
-          {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50" />
 
-          {/* Title pill — top */}
-          <div className="absolute left-1/2 top-8 flex -translate-x-1/2 flex-col items-center gap-2">
-            <span className="glass rounded-full px-5 py-2 text-sm font-semibold text-ink shadow-soft">
+          {/* Title pill — top of image */}
+          <div className="absolute left-1/2 top-6 -translate-x-1/2">
+            <span className="glass rounded-full px-4 py-1.5 text-xs font-semibold text-ink shadow-soft">
               {label}
             </span>
-            <ChevronUp className="h-4 w-4 text-white/70" />
-            <span className="h-20 w-px bg-white/60" />
-            <ChevronDown className="h-5 w-5 text-white/85" />
           </div>
+        </div>
 
-          {/* Content — overlaid at bottom of image */}
-          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center px-5 pb-5 pt-10">
-            {/* Location */}
-            <p className="label-xs text-white/75">{destination.location}</p>
+        {/* Content — below image, normal flow */}
+        <div className="flex flex-col items-center bg-gradient-to-b from-black/70 via-black/85 to-black/95 px-5 pb-5 pt-4">
+          <p className="label-xs text-white/70">{destination.location}</p>
+          <p className="mt-1.5 text-center text-sm font-semibold leading-snug text-white/90">
+            {active ? destination.overview : destination.overview.slice(0, 82) + "…"}
+          </p>
 
-            {/* Description */}
-            <p className="mt-2 px-2 text-center text-sm font-semibold leading-snug text-white/90">
-              {active ? destination.overview : destination.overview.slice(0, 82) + "…"}
-            </p>
+          {active && (
+            <div className="mt-3 flex w-full max-w-xs flex-col gap-1.5">
+              {destination.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="w-full text-center rounded-full bg-white/15 px-4 py-2 text-xs text-white/85 backdrop-blur-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
-            {/* Activity pills — stacked vertically */}
-            {active && (
-              <div className="mt-3 flex w-full max-w-xs flex-col gap-1.5">
-                {destination.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="w-full text-center rounded-full bg-white/20 px-4 py-1.5 text-xs text-white/90 backdrop-blur-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-
-            {/* + button — small and minimal */}
-            <button
-              type="button"
-              aria-label={active ? "Close experience" : "Open experience"}
-              onClick={() => setActive((a) => !a)}
-              className={`mt-4 h-10 w-10 shrink-0 rounded-full transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/80 text-ink"}`}
-            >
-              <span className="block rotate-[-45deg] text-lg font-light">+</span>
-            </button>
-          </div>
+          <button
+            type="button"
+            aria-label={active ? "Close experience" : "Open experience"}
+            onClick={() => setActive((a) => !a)}
+            className={`mt-4 h-10 w-10 shrink-0 rounded-full transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/80 text-ink"}`}
+          />
         </div>
       </div>
 
@@ -151,12 +138,8 @@ export function MapExperienceSection({
           <span className="glass rounded-full px-5 py-2 text-sm font-semibold text-ink shadow-soft">
             {label}
           </span>
-          <ChevronUp className="h-4 w-4 text-white/70" />
-          <span className="h-24 w-px bg-white/60" />
-          <ChevronDown className="h-5 w-5 text-white/85" />
         </div>
 
-        {/* Details panel — revealed on click */}
         <div
           className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-3 p-6 transition-all duration-500"
           style={{
@@ -181,7 +164,6 @@ export function MapExperienceSection({
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="absolute inset-x-0 bottom-8 flex flex-col items-center gap-3">
           {!active && (
             <>
@@ -196,9 +178,7 @@ export function MapExperienceSection({
             aria-label={active ? "Close experience" : "Open experience"}
             onClick={() => setActive((a) => !a)}
             className={`h-10 w-10 rounded-full transition-all duration-300 hover:scale-110 ${active ? "rotate-45 bg-white text-ink" : "bg-white/80 text-ink"}`}
-          >
-            <span className="block rotate-[-45deg] text-lg font-light">+</span>
-          </button>
+          />
         </div>
       </div>
     </section>
